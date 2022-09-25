@@ -1,3 +1,4 @@
+import '../../components/body_components/option_scroll_body_component.dart';
 import '../../components/body_components/textfield_search_body_component.dart';
 import '../../components/body_components/description_body_component.dart';
 import '../../components/header_components/row_icons_header_components.dart';
@@ -12,7 +13,8 @@ class HeaderDivisionHomeScreen extends StatelessWidget {
       children: const <Widget>[
         RowIconsHeaderComponents(),
         DescriptionBodyComponent(),
-        TextFieldSearchBodyComponent()
+        TextFieldSearchBodyComponent(),
+        OptionScrollBodyComponent()
       ]
     );
   }
