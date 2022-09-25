@@ -1,4 +1,5 @@
-import '../../components/body_components/description_header_component.dart';
+import '../../components/body_components/textfield_search_body_component.dart';
+import '../../components/body_components/description_body_component.dart';
 import '../../components/header_components/row_icons_header_components.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,8 @@ class HeaderDivisionHomeScreen extends StatelessWidget {
     return Column(
       children: const <Widget>[
         RowIconsHeaderComponents(),
-        DescriptionHeaderComponent()
+        DescriptionBodyComponent(),
+        TextFieldSearchBodyComponent()
       ]
     );
   }
