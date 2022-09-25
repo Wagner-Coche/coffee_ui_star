@@ -1,3 +1,4 @@
+import '../app/presenter/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -8,7 +9,10 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: "Coffee UI",
       debugShowCheckedModeBanner: false,
-      home: Container(),
+      initialRoute: "/",
+      routes: {
+        "/" : (context) => const HomeScreen(),
+      },
     );
   }
 }
