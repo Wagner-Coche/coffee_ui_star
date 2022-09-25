@@ -1,3 +1,4 @@
+import '../../components/body_components/description_header_component.dart';
 import '../../components/header_components/row_icons_header_components.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,8 @@ class HeaderDivisionHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: const <Widget>[
-        RowIconsHeaderComponents()
+        RowIconsHeaderComponents(),
+        DescriptionHeaderComponent()
       ]
     );
   }

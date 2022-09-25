@@ -7,4 +7,5 @@ class ColorUtils {
   Color secondColor = const Color(0xff141921);
   Color thirdColor = const Color(0xff393b40);
   Color blackColor = Colors.black;
+  Color whiteColor = Colors.white;
 }
