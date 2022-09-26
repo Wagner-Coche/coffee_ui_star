@@ -9,11 +9,14 @@ class HomeScreenWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
-      child: Column(
-        children: const <Widget>[
-          HeaderDivisionHomeScreen(),
-          BodyDivisionHomeScreen(),
-        ]
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          children: const <Widget>[
+            HeaderDivisionHomeScreen(),
+            BodyDivisionHomeScreen(),
+          ]
+        ),
       )
     );
   }
