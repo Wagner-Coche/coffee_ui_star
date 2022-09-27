@@ -1,3 +1,4 @@
+import '../../components/body_components/description_coffee_component.dart';
 import '../../components/body_components/info_data_coffee_component.dart';
 import '../../components/body_components/blur_image_container_component.dart';
 import '../header_division/header_division_specified_screen.dart';
@@ -10,27 +11,35 @@ class BodyDivisionSpecifiedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: Stack(
-        alignment: Alignment.bottomCenter,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           SizedBox(
             child: Stack(
-              alignment: Alignment.topCenter,
-              children: const <Widget>[
-                ImageContainerSpecifiedScreenComponent(image: "assets/images/pexels-tyler-nix-2396220.jpg"),
-                HeaderDivisionSpecifiedScreen(),
+              alignment: Alignment.bottomCenter,
+              children: [
+                SizedBox(
+                  child: Stack(
+                    alignment: Alignment.topCenter,
+                    children: const <Widget>[
+                      ImageContainerSpecifiedScreenComponent(image: "assets/images/pexels-tyler-nix-2396220.jpg"),
+                      HeaderDivisionSpecifiedScreen(),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  child: Stack(
+                    alignment: Alignment.topCenter,
+                    children: const <Widget>[
+                      BlurImageContainerComponent(),
+                      InfoDataCoffeeComponent(title: "Cappuccino", price: 4.5, getCoffee: 6.768)
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
-          SizedBox(
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: const <Widget>[
-                BlurImageContainerComponent(),
-                InfoDataCoffeeComponent(title: "Cappuccino", price: 4.5, getCoffee: 6.768)
-              ],
-            ),
-          ),
+          const DescriptionCoffeeComponent()
         ]
       ),
     );
