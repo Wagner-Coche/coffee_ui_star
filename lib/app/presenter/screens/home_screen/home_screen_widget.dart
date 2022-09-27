@@ -7,17 +7,17 @@ class HomeScreenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
-      child: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
+    return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      child: Container(
+        margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
         child: Column(
           children: const <Widget>[
             HeaderDivisionHomeScreen(),
             BodyDivisionHomeScreen(),
           ]
-        ),
-      )
+        )
+      ),
     );
   }
 }

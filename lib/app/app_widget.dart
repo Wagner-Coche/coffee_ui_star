@@ -1,3 +1,4 @@
+import '../app/presenter/screens/specified_screen/specified_screen.dart';
 import '../app/presenter/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -16,7 +17,8 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
-        "/" : (context) => const HomeScreen(),
+        //"/" : (context) => const HomeScreen(),
+        "/" : (context) => const SpecifiedScreen()
       },
     );
   }

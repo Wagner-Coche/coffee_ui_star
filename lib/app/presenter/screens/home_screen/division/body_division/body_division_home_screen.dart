@@ -17,7 +17,7 @@ class BodyDivisionHomeScreen extends StatelessWidget {
         TextFieldSearchBodyComponent(),
         OptionScrollBodyComponent(),
         CardsCoffeeBodyComponent(),
-        TextSpecialBodyComponent()
+        TextSpecialBodyComponent(),
       ],
     );
   }
