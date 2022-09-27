@@ -1,27 +1,37 @@
 import 'dart:ui';
 
+import 'info_coffee_widget.dart';
 import 'row_star_points_cards_widgets.dart';
 import '../../../utils/color_utils.dart';
 import 'package:flutter/material.dart';
 
 class CardCoffeeWidget extends StatelessWidget {
-  const CardCoffeeWidget({Key? key, required this.image, required this.points}) : super(key: key);
+  const CardCoffeeWidget({
+    Key? key, 
+    required this.image, 
+    required this.points, 
+    required this.titleCoffee, 
+    required this.detailCoffee, 
+    required this.price}) : super(key: key);
 
   final String image;
   final double points;
+  final String titleCoffee;
+  final String detailCoffee;
+  final double price;
 
   @override
   Widget build(BuildContext context) {
     const double blur = 40;
 
     return SizedBox(
-      height: MediaQuery.of(context).size.height * .3,
+      height: MediaQuery.of(context).size.height * .33,
       width: MediaQuery.of(context).size.width * .42,
       child: Stack(
         alignment: Alignment.center,
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * .3,
+            height: MediaQuery.of(context).size.height * .33,
             width: MediaQuery.of(context).size.width * .42,
             decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(20)),
@@ -49,17 +59,18 @@ class CardCoffeeWidget extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
                 ),
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height * .3,
+                  height: MediaQuery.of(context).size.height * .33,
                   width: MediaQuery.of(context).size.width * .42,
                 ),
               ),
             ),
           ),
-          SizedBox(
+          Container(
+            margin: const EdgeInsets.only(left: 14, right: 14, top: 14),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Container(
-                  margin: const EdgeInsets.only(left: 14, right: 14, top: 14),
+                SizedBox(
                   child: Stack(
                     alignment: Alignment.topRight,
                     children: [
@@ -98,7 +109,30 @@ class CardCoffeeWidget extends StatelessWidget {
                       )
                     ],
                   ),
-                )
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 8, top: 10),
+                  child: Text(
+                    titleCoffee,
+                    style: TextStyle(
+                      color: ColorUtils.colorUtils.whiteColor,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    )
+                  )
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 8, top: 6),
+                  child: Text(
+                    detailCoffee,
+                    style: TextStyle(
+                      color: ColorUtils.colorUtils.whiteColor.withOpacity(.5),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w300,
+                    )
+                  )
+                ),
+                SizedBox(child: InfoCoffeeWidget(price: price))
               ],
             ),
           )
