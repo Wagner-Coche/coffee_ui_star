@@ -1,3 +1,4 @@
+import '../../components/header_components/row_icons_header_specified_screen_component.dart';
 import 'package:flutter/material.dart';
 
 class HeaderDivisionSpecifiedScreen extends StatelessWidget {
@@ -5,6 +6,6 @@ class HeaderDivisionSpecifiedScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const RowIconsHeaderSpecifiedScreenComponent();
   }
 }

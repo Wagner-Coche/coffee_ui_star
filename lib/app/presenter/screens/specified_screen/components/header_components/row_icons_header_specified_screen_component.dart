@@ -29,6 +29,7 @@ class RowIconsHeaderSpecifiedScreenComponent extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {}, 
               style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.only(right: 3),
                 primary: ColorUtils.colorUtils.primaryColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)
