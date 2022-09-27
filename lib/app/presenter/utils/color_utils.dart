@@ -9,5 +9,6 @@ class ColorUtils {
   Color orangeColor = const Color(0xffd27842);
   Color blackColor = Colors.black;
   Color black54Color = Colors.black54;
+  Color black12Color = Colors.black12;
   Color whiteColor = Colors.white;
 }

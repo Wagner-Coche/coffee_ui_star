@@ -63,6 +63,7 @@ flutter:
     - assets/images/pexels-georgie-devlin-8631270.jpg
     - assets/images/pexels-marta-dzedyshko-2067432.jpg
     - assets/images/pexels-ryan-horn-2318017.jpg
+    - assets/images/pexels-tyler-nix-2396220.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

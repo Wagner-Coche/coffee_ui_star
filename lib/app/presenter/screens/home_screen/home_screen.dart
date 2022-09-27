@@ -1,3 +1,4 @@
+import '../home_screen/division/footer_division/footer_division_home_screen.dart';
 import '../../utils/color_utils.dart';
 import 'home_screen_widget.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: ColorUtils.colorUtils.primaryColor,
       body: const HomeScreenWidget(),
+      bottomNavigationBar: const FooterDivisionHomeScreen(),
     );
   }
 }

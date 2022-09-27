@@ -11,7 +11,7 @@ class CardsCoffeeBodyComponent extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: const [
-          CardCoffeeWidget(image: "assets/images/pexels-ryan-horn-2318017.jpg", points: 4.5, titleCoffee: "Cappucinno", detailCoffee: "With Oat Milk", price: 4.20),
+          CardCoffeeWidget(image: "assets/images/pexels-tyler-nix-2396220.jpg", points: 4.5, titleCoffee: "Cappucinno", detailCoffee: "With Oat Milk", price: 4.20),
           CardCoffeeWidget(image: "assets/images/pexels-georgie-devlin-8631270.jpg", points: 3.1, titleCoffee: "Cappucinno", detailCoffee: "With Chocolate", price: 3.14)
         ],
       ),
