@@ -1,3 +1,4 @@
+import '../../components/body_components/choices_specified_screen_component.dart';
 import '../../components/body_components/description_coffee_component.dart';
 import '../../components/body_components/info_data_coffee_component.dart';
 import '../../components/body_components/blur_image_container_component.dart';
@@ -39,7 +40,8 @@ class BodyDivisionSpecifiedScreen extends StatelessWidget {
               ],
             ),
           ),
-          const DescriptionCoffeeComponent()
+          const DescriptionCoffeeComponent(),
+          const ChoicesSpecifiedScreenComponent()
         ]
       ),
     );
