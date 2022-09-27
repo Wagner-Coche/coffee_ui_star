@@ -1,3 +1,4 @@
+import '../../components/body_components/info_data_coffee_component.dart';
 import '../../components/body_components/blur_image_container_component.dart';
 import '../header_division/header_division_specified_screen.dart';
 import '../../components/body_components/image_container_specified_screen_component.dart';
@@ -21,7 +22,15 @@ class BodyDivisionSpecifiedScreen extends StatelessWidget {
               ],
             ),
           ),
-          const BlurImageContainerComponent()
+          SizedBox(
+            child: Stack(
+              alignment: Alignment.topCenter,
+              children: const <Widget>[
+                BlurImageContainerComponent(),
+                InfoDataCoffeeComponent(title: "Cappuccino", price: 4.5, getCoffee: 6.768)
+              ],
+            ),
+          ),
         ]
       ),
     );
