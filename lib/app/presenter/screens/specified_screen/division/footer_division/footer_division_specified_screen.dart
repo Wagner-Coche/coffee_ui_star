@@ -3,7 +3,9 @@ import '../../components/footer_components/column_price_component.dart';
 import 'package:flutter/material.dart';
 
 class FooterDivisionSpecifiedScreen extends StatelessWidget {
-  const FooterDivisionSpecifiedScreen({Key? key}) : super(key: key);
+  const FooterDivisionSpecifiedScreen({Key? key, required this.price}) : super(key: key);
+
+  final double price;
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +13,9 @@ class FooterDivisionSpecifiedScreen extends StatelessWidget {
       margin: const EdgeInsets.only(left: 20, top: 40),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const <Widget>[
-          ColumnPriceComponent(price: 4.20),
-          ButtonBuyComponent()
+        children: <Widget>[
+          ColumnPriceComponent(price: price),
+          const ButtonBuyComponent()
         ] 
       ),
     );

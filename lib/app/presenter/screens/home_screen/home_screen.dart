@@ -16,6 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: ColorUtils.colorUtils.primaryColor,
       body: const HomeScreenWidget(),
+      bottomNavigationBar: const FooterDivisionHomeScreen(),
     );
   }
 }

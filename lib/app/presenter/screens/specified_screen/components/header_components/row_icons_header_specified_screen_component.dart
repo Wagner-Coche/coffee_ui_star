@@ -14,7 +14,9 @@ class RowIconsHeaderSpecifiedScreenComponent extends StatelessWidget {
           SizedBox(
             width: 40,
             child: ElevatedButton(
-              onPressed: () {}, 
+              onPressed: () {
+                Navigator.of(context).pop();
+              }, 
               style: ElevatedButton.styleFrom(
                 primary: ColorUtils.colorUtils.primaryColor,
                 shape: RoundedRectangleBorder(

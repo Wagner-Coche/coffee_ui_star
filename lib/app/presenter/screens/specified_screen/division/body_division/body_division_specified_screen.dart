@@ -7,7 +7,19 @@ import '../../components/body_components/image_container_specified_screen_compon
 import 'package:flutter/material.dart';
 
 class BodyDivisionSpecifiedScreen extends StatelessWidget {
-  const BodyDivisionSpecifiedScreen({Key? key}) : super(key: key);
+  const BodyDivisionSpecifiedScreen({
+    Key? key, 
+    required this.image, 
+    required this.points, 
+    required this.titleCoffee, 
+    required this.detailCoffee, 
+    required this.price}) : super(key: key);
+
+  final String image;
+  final double points;
+  final String titleCoffee;
+  final String detailCoffee;
+  final double price;
 
   @override
   Widget build(BuildContext context) {
@@ -22,18 +34,18 @@ class BodyDivisionSpecifiedScreen extends StatelessWidget {
                 SizedBox(
                   child: Stack(
                     alignment: Alignment.topCenter,
-                    children: const <Widget>[
-                      ImageContainerSpecifiedScreenComponent(image: "assets/images/pexels-tyler-nix-2396220.jpg"),
-                      HeaderDivisionSpecifiedScreen(),
+                    children: <Widget>[
+                      ImageContainerSpecifiedScreenComponent(image: image),
+                      const HeaderDivisionSpecifiedScreen(),
                     ],
                   ),
                 ),
                 SizedBox(
                   child: Stack(
                     alignment: Alignment.topCenter,
-                    children: const <Widget>[
-                      BlurImageContainerComponent(),
-                      InfoDataCoffeeComponent(title: "Cappuccino", price: 4.5, getCoffee: 6.768)
+                    children: <Widget>[
+                      const BlurImageContainerComponent(),
+                      InfoDataCoffeeComponent(title: titleCoffee, price: price, getCoffee: 6.768)
                     ],
                   ),
                 ),

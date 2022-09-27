@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import '../../specified_screen/specified_screen.dart';
 import 'info_coffee_widget.dart';
 import 'row_star_points_cards_widgets.dart';
 import '../../../utils/color_utils.dart';
@@ -74,14 +75,25 @@ class CardCoffeeWidget extends StatelessWidget {
                   child: Stack(
                     alignment: Alignment.topRight,
                     children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height * .18,
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(Radius.circular(20)),
-                          image: DecorationImage(
-                            image: AssetImage(image),
-                            fit: BoxFit.cover
-                          )
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (_) => SpecifiedScreen(
+                            image: image,
+                            points: points,
+                            titleCoffee: titleCoffee,
+                            detailCoffee: detailCoffee,
+                            price: price,
+                          )));
+                        },
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * .18,
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.all(Radius.circular(20)),
+                            image: DecorationImage(
+                              image: AssetImage(image),
+                              fit: BoxFit.cover
+                            )
+                          ),
                         ),
                       ),
                       ClipRRect(
