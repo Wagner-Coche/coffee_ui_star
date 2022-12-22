@@ -10,6 +10,7 @@ class TextSpecialBodyComponent extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(left: 5, top: 25),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "Special for you",

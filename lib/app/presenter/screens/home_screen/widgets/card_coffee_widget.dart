@@ -85,14 +85,17 @@ class CardCoffeeWidget extends StatelessWidget {
                             price: price,
                           )));
                         },
-                        child: Container(
-                          height: MediaQuery.of(context).size.height * .18,
-                          decoration: BoxDecoration(
-                            borderRadius: const BorderRadius.all(Radius.circular(20)),
-                            image: DecorationImage(
-                              image: AssetImage(image),
-                              fit: BoxFit.cover
-                            )
+                        child: Hero(
+                          tag: image,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * .18,
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.all(Radius.circular(20)),
+                              image: DecorationImage(
+                                image: AssetImage(image),
+                                fit: BoxFit.cover
+                              )
+                            ),
                           ),
                         ),
                       ),
