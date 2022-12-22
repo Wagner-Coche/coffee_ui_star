@@ -1,3 +1,3 @@
 # coffee_ui
 
-![Ilustração](assets/cafe.png)
+![Ilustração](assets/images/cafe.png)
